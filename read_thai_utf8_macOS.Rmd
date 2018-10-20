@@ -1,10 +1,11 @@
 ---
-title: "read Thai UTF-8 in macOS 10.14"
+title: "read Thai UTF-8 on macOS"
 output: html_notebook
 ---
 
 ```{r}
-Sys.setlocale("LC_CTYPE", "UTF-8")
+Sys.setlocale("LC_CTYPE", "UTF-8") # for macOS
+options(encoding="UTF-8")
 ```
 
 ```{r}
@@ -12,14 +13,17 @@ library(tidyverse)
 ```
 
 ```{r}
-df <- read_tsv("province_thai_utf8.tsv")
+df <- read_tsv("data/province_thai_utf8.tsv")
+# df <- read_csv("https://spotifycharts.com/regional/th/daily/latest/download", skip=1, trim_ws=T)
 df
 ```
 
+### unable to sort Thai alphabet correctly
 ```{r}
-df %>%
+df %>% 
   arrange(DescrTh) %>%
   select(DescrTh)
 ```
+
 
 
