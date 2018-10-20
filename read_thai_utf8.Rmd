@@ -1,0 +1,26 @@
+---
+title: "read Thai UTF-8 on Windows"
+output: html_notebook
+---
+
+```{r}
+Sys.setlocale("LC_CTYPE", "thai") # for Windows only
+# Sys.setlocale("LC_CTYPE", "UTF-8") # for macOS
+options(encoding="UTF-8") # Optional (for Windows)
+```
+
+```{r}
+library(readr)
+```
+
+```{r}
+df <- read_tsv("data/province_thai_utf8.tsv")
+df
+```
+
+```{r}
+df
+```
+
+
+
