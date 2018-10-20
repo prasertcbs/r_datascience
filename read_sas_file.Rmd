@@ -8,7 +8,8 @@ library(haven)
 ```
 
 ```{r}
-df <- read_sas("c:/temp/car_sales.sas7bdat")
+# df <- read_sas("c:/temp/car_sales.sas7bdat")
+df <- read_sas("https://github.com/prasertcbs/r_datascience/raw/master/data/car_sales.sas7bdat")
 head(df)
 ```
 
@@ -19,7 +20,7 @@ head(df2)
 
 ```{r}
 library(readr)
-write_csv(df2, "c:/temp/bankloan.csv") #readr
+write_csv(df2, "c:/temp/bankloan.csv") # readr
 write_sav(df2, "c:/temp/bankloan.sav") # haven
 ```
 

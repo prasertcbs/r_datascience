@@ -34,12 +34,12 @@ dfs[2]
 
 ```{r}
 library(readxl)
-url <- "https://github.com/prasertcbs/r_datascience/raw/master/BaskinRobbins.xlsx"
+url <- "https://github.com/prasertcbs/r_datascience/raw/master/data/BaskinRobbins.xlsx"
 # destfile <- "BaskinRobbins.xlsx"
 destfile <- tempfile()
 curl::curl_download(url, destfile)
 BaskinRobbins <- read_excel(destfile)
-View(BaskinRobbins)
+BaskinRobbins
 ```
 
 ```{r}

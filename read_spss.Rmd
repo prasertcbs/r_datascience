@@ -9,7 +9,8 @@ library(haven)
 
 ```{r}
 # df <- read_spss("C:\\Temp\\spss\\car_sales.sav")
-df <- read_spss("C:/Temp/spss/car_sales.sav")
+# df <- read_spss("C:/Temp/spss/car_sales.sav")
+df <- read_spss("https://github.com/prasertcbs/r_datascience/raw/master/data/car_sales.sav")
 # df <- read_spss(choose.files())
 df
 ```
