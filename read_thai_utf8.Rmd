@@ -14,7 +14,8 @@ library(readr)
 ```
 
 ```{r}
-df <- read_tsv("data/province_thai_utf8.tsv")
+# df <- read_tsv("data/province_thai_utf8.tsv")
+df <- read_tsv("https://github.com/prasertcbs/r_datascience/raw/master/data/province_thai_utf8.tsv")
 df
 ```
 

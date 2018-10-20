@@ -9,7 +9,8 @@ library(haven)
 
 ```{r}
 # df <- read_stata("c:/temp/bankloan.dta")
-df <- read_stata(choose.files())
+df <- read_stata("https://github.com/prasertcbs/r_datascience/raw/master/data/bankloan.dta")
+# df <- read_stata(choose.files())
 head(df)
 ```
 
