@@ -1,0 +1,25 @@
+---
+title: "read Thai UTF-8 in macOS 10.14"
+output: html_notebook
+---
+
+```{r}
+Sys.setlocale("LC_CTYPE", "UTF-8")
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+df <- read_tsv("province_thai_utf8.tsv")
+df
+```
+
+```{r}
+df %>%
+  arrange(DescrTh) %>%
+  select(DescrTh)
+```
+
+
