@@ -1,0 +1,49 @@
+---
+title: "read Excel files"
+output: html_notebook
+---
+
+```{r}
+library(readxl)
+```
+
+```{r}
+# df <- read_excel("drinks.xlsx", n_max=5)
+# df <- read_excel("drinks.xlsx", range=cell_cols("A:C"))
+df <- read_excel("drinks.xlsx", range="A1:D10")
+df
+```
+
+```{r}
+# df <- read_excel("multi.xlsx")
+# df <- read_excel("multi.xlsx", sheet=2)
+df <- read_excel("multi.xlsx", sheet="accident")
+df
+```
+
+```{r}
+path <- "multi.xlsx"
+dfs <- lapply(excel_sheets(path), read_excel, path=path)
+dfs
+```
+
+```{r}
+dfs[2]
+```
+
+
+```{r}
+library(readxl)
+url <- "https://github.com/prasertcbs/r_datascience/raw/master/BaskinRobbins.xlsx"
+# destfile <- "BaskinRobbins.xlsx"
+destfile <- tempfile()
+curl::curl_download(url, destfile)
+BaskinRobbins <- read_excel(destfile)
+View(BaskinRobbins)
+```
+
+```{r}
+df <- read_excel("TopMovies.xlsx", range="C5:F55")
+df
+```
+
