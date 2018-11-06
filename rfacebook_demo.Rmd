@@ -1,0 +1,26 @@
+---
+title: "RFacebook demo"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(RCurl)
+library(Rfacebook)
+```
+
+```{r}
+fb_oauth <- fbOAuth(app_id="227752721290426",
+                    app_secret = "18b061b4c778db16c4793392c2686e1b",
+                    extended_permissions = T)
+```
+
+```{r}
+pg <- getPage(page="bnk48official",
+              token=fb_oauth,
+              since="2018/10/1",
+              until="2018/10/5",
+              n=100)
+pg
+```
+
